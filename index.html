@@ -15,19 +15,26 @@
                     <img src="images/logo.png" alt="SkillBridge Logo">
                 </div>
                 <nav class="nav">
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#industries">Industries</a>
-                    <a href="#contact">Contact</a>
-                </nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <div class="dropdown">
+        <a href="services.html">Services <i class="fas fa-caret-down"></i></a>
+        <div class="dropdown-content">
+            <a href="#services">For Job Seekers</a>
+            <a href="#services">For Employers</a>
+        </div>
+    </div>
+    <a href="industries.html">Industries</a>
+    <a href="#contact">Contact</a>
+</nav>
                 <div class="header-contact">
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
-                        <span>+1 (555) 123-4567</span>
+                        <span>+02 8021 1804, +61 415 594 328</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>info@skillbridge.com</span>
+                        <span>hr@myskillbridge.com.au</span>
                     </div>
                 </div>
                 <button class="mobile-menu-btn">
@@ -36,6 +43,12 @@
             </div>
         </div>
     </header>
+    <section class="hero-video">
+    <video autoplay muted loop playsinline>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
 
     <section class="hero" id="hero">
         <div class="container">
@@ -57,112 +70,31 @@
         </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About SkillBridge</h2>
-                <p>At SkillBridge Recruitment Services, we believe that the right opportunity can transform a career, and the right talent can transform a business. Founded with the vision of becoming a trusted recruitment partner, we focus on creating lasting connections.</p>
-            </div>
-            <div class="values-grid">
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Meaningful Employment</h3>
-                    <p>Helping job seekers secure opportunities that align with their career goals</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-user-check"></i>
-                    </div>
-                    <h3>Quality Talent</h3>
-                    <p>Assisting employers in finding skilled, reliable, and motivated candidates</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3>Professional Excellence</h3>
-                    <p>Committed to professionalism, integrity, and delivering exceptional results</p>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Mutual Success</h3>
-                    <p>Ensuring both candidates and companies achieve their strategic goals</p>
-                </div>
-            </div>
-            <div class="about-footer">
-                <p>Our team is committed to professionalism, integrity, and results. With strong networks and industry expertise, we ensure that both candidates and companies achieve their goals.</p>
-            </div>
+   
+   <section class="services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>We provide comprehensive recruitment solutions tailored to the needs of both employers and job seekers.</p>
         </div>
-    </section>
-
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>We provide comprehensive recruitment solutions tailored to the needs of both employers and job seekers.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3>For Job Seekers</h3>
-                    </div>
-                    <div class="service-list">
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Career counseling & guidance</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>CV & interview preparation</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Local and overseas job opportunities</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Support throughout the hiring process</span>
-                        </div>
-                    </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/jobseekers.png" alt="For Job Seekers">
+                <div class="service-card-footer">
+                    <h3>For Job Seekers</h3>
                     <a href="#contact" class="btn btn-primary">Start Your Career Journey</a>
                 </div>
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>For Employers</h3>
-                    </div>
-                    <div class="service-list">
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Skilled & semi-skilled workforce recruitment</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Customized staffing solutions</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Candidate screening & background checks</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Industry-specific hiring support</span>
-                        </div>
-                    </div>
+            </div>
+            <div class="service-card">
+                <img src="images/employer.png" alt="For Employers">
+                <div class="service-card-footer">
+                    <h3>For Employers</h3>
                     <a href="#contact" class="btn btn-secondary">Find Quality Talent</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="industries" id="industries">
         <div class="container">
@@ -294,7 +226,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Office Address</h4>
-                                <p>123 Main Street, Suite 100, City, Country</p>
+                                <p>Suite 30 Level 3 104 Bathrust Street,Sydney NSW 2000</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -303,7 +235,7 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Phone</h4>
-                                <p>+1 (555) 123-4567</p>
+                                <p>+02 8021 1804, +61 415 594 328</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -312,41 +244,41 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Email</h4>
-                                <p>info@skillbridge.com</p>
+                                <p>hr@myskillbridge.com.au</p>
                             </div>
                         </div>
                     </div>
                     <div class="office-hours">
                         <h4>Office Hours</h4>
                         <div class="hours-list">
-                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                            <p>Saturday: 9:00 AM - 2:00 PM</p>
-                            <p>Sunday: Closed</p>
+                            <p>Monday - Friday: 9:00 AM - 10:00 PM</p>
+                            <p>Saturday & Sunday: Closed</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form-container">
-                    <h3>Send Us a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="fullName">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+    <h3>Send Us a Message</h3>
+    <form id="contactForm" action="https://formspree.io/f/mpwjzvby" method="POST">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
-                </div>
+                <div class="success-message">Thank you! Your message has been sent.</div>
+            </div>
             </div>
         </div>
     </section>
@@ -362,15 +294,15 @@
                     <div class="footer-contact">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Main Street, Suite 100, City, Country</span>
+                            <span>Suite 30 Level 3 104 Bathrust Street,Sydney NSW 2000</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone-alt"></i>
-                            <span>+1 (555) 123-4567</span>
+                            <span>+02 8021 1804, +61 415 594 328</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>info@skillbridge.com</span>
+                            <span>hr@myskillbridge.com.au</span>
                         </div>
                     </div>
                 </div>

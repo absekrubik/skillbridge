@@ -273,3 +273,23 @@ const debouncedScrollHandler = debounce(() => {
 }, 10);
 
 window.addEventListener('scroll', debouncedScrollHandler);
+const form = document.getElementById('contactForm');
+const successMsg = document.querySelector('.success-message');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+        successMsg.classList.add('show');
+        form.reset();
+    } else {
+        alert("Oops! There was a problem submitting your form.");
+    }
+});
