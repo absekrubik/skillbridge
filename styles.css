@@ -900,7 +900,7 @@ html {
 .hero-video {
     position: relative;
     width: 100%;
-    height: calc(100vh - 80px); /* full screen minus header height (adjust 80px if header differs) */
+    height: 80vh; /* reduced from full screen */
     overflow: hidden;
 }
 
@@ -1080,4 +1080,77 @@ html {
 
 .service-card-footer .btn {
     margin-top: 0.5rem;
+}
+/* Heading styling */
+.section-header h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Pen stroke underline */
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* adjust distance */
+    height: 3px; /* thickness */
+    width: 0; /* start hidden */
+    background: linear-gradient(90deg, #15639e, #4bb6f4);
+    border-radius: 2px;
+    transition: width 1s ease-out;
+}
+
+/* When heading is visible in viewport */
+.section-header h2.visible::after {
+    width: 100%;
+}
+
+.cta-section {
+    position: relative;
+    height: 400px; /* adjust as needed */
+    
+    /* Background image settings */
+    background-image: url('images/worldmap.png'); /* replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* stays still while scrolling */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-content {
+    background: rgba(255, 255, 255, 0.2); /* semi-transparent “glass” */
+    -webkit-backdrop-filter: blur(10px);           /* blur behind content */
+    backdrop-filter: blur(10px);   /* for Safari */
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    color: #ffffff; /* white text */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    max-width: 600px;
+    width: 90%;
+}
+
+.cta-content h2,
+.cta-content p {
+    color: #ffffff; /* white text explicitly */
+}
+
+.cta-content button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #15639e; /* same as Services button */
+    color: #ffffff; /* white text */
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-content button:hover {
+    background-color: #4bb6f4; /* slightly darker shade on hover */
 }

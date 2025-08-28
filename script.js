@@ -293,3 +293,9 @@ form.addEventListener('submit', async (e) => {
         alert("Oops! There was a problem submitting your form.");
     }
 });
+const headings = document.querySelectorAll('.section-header h2');
+
+headings.forEach(heading => {
+    observer.observe(heading); // using the fade-in observer you already have
+    heading.classList.add('fade-in'); // optional
+});
