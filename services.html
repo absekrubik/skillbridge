@@ -3,7 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | SkillBridge Recruitment Services</title>
+  
+  <!-- SEO Title -->
+  <title>Our Services | SkillBridge Recruitment Services</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="Explore SkillBridge Recruitment Services tailored for job seekers and employers. We offer career counseling, CV preparation, overseas jobs, staffing solutions, candidate screening, and more.">
+
+  <!-- Meta Keywords -->
+  <meta name="keywords" content="recruitment services, job seeker support, employer staffing, career counseling, interview preparation, workforce recruitment, HR solutions">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.myskillbridge.com.au/services.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Our Services | SkillBridge Recruitment Services">
+  <meta property="og:description" content="SkillBridge provides recruitment solutions for job seekers and employers, including career guidance, staffing solutions, and industry-specific hiring support.">
+  <meta property="og:image" content="https://www.myskillbridge.com.au/images/logo.png">
+  <meta property="og:url" content="https://www.myskillbridge.com.au/services.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Services | SkillBridge Recruitment Services">
+  <meta name="twitter:description" content="Connecting talent with opportunities. Explore our job seeker and employer recruitment services.">
+  <meta name="twitter:image" content="https://www.myskillbridge.com.au/images/logo.png">
+
+  <!-- Schema.org (Services Page) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Recruitment and Staffing Solutions",
+    "provider": {
+      "@type": "Organization",
+      "name": "SkillBridge Recruitment Services",
+      "url": "https://www.myskillbridge.com.au",
+      "logo": "https://www.myskillbridge.com.au/images/logo.png"
+    },
+    "areaServed": "AU",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Recruitment Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Career Counseling & Guidance"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "CV & Interview Preparation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Overseas Job Opportunities"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Workforce Recruitment for Employers"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -13,16 +89,16 @@
     <div class="container">
       <div class="header-content">
         <div class="logo">
-          <img src="images/logo.png" alt="SkillBridge Logo">
+          <img src="images/logo.png" alt="SkillBridge Recruitment Services Logo">
         </div>
         <nav class="nav">
           <a href="index.html">Home</a>
-          <a href="about.html" class="active">About</a>
+          <a href="about.html">About</a>
           <div class="dropdown">
-            <a href="services.html">Services <i class="fas fa-caret-down"></i></a>
+            <a href="services.html" class="active">Services <i class="fas fa-caret-down"></i></a>
             <div class="dropdown-content">
-              <a href="services.html">For Job Seekers</a>
-              <a href="services.html">For Employers</a>
+              <a href="#jobseekers">For Job Seekers</a>
+              <a href="#employers">For Employers</a>
             </div>
           </div>
           <a href="industries.html">Industries</a>
@@ -46,74 +122,75 @@
   </header>
 
   <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our <span class="gradient-text">Services</span></h2>
-                <p>We provide comprehensive recruitment solutions tailored to the needs of both employers and job seekers.</p>
-            </div>
-            <div class="services-grid">
-                <!-- Card 1: For Job Seekers -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h3>For Job Seekers</h3>
-                    </div>
-                    <div class="service-list">
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Career counseling & guidance</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>CV & interview preparation</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Local and overseas job opportunities</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Support throughout the hiring process</span>
-                        </div>
-                    </div>
-                    <a href="#contact" class="btn btn-primary">Start Your Career Journey</a>
-                </div>
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h1>Our <span class="gradient-text">Services</span></h1>
+        <p>We provide comprehensive recruitment solutions tailored to the needs of both employers and job seekers.</p>
+      </div>
+      <div class="services-grid">
 
-                <!-- Card 2: For Employers -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>For Employers</h3>
-                    </div>
-                    <div class="service-list">
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Skilled & semi-skilled workforce recruitment</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Customized staffing solutions</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Candidate screening & background checks</span>
-                        </div>
-                        <div class="service-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Industry-specific hiring support</span>
-                        </div>
-                    </div>
-                    <a href="#contact" class="btn btn-secondary">Find Quality Talent</a>
-                </div>
+        <!-- Card 1: For Job Seekers -->
+        <div class="service-card" id="jobseekers">
+          <div class="service-header">
+            <div class="service-icon">
+              <i class="fas fa-user-tie"></i>
             </div>
+            <h2>For Job Seekers</h2>
+          </div>
+          <div class="service-list">
+            <div class="service-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Career counseling & guidance</span>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-check-circle"></i>
+              <span>CV & interview preparation</span>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Local and overseas job opportunities</span>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Support throughout the hiring process</span>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn btn-primary">Start Your Career Journey</a>
         </div>
-    </section>
 
+        <!-- Card 2: For Employers -->
+        <div class="service-card" id="employers">
+          <div class="service-header">
+            <div class="service-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h2>For Employers</h2>
+          </div>
+          <div class="service-list">
+            <div class="service-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Skilled & semi-skilled workforce recruitment</span>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Customized staffing solutions</span>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Candidate screening & background checks</span>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Industry-specific hiring support</span>
+            </div>
+          </div>
+          <a href="index.html#contact" class="btn btn-secondary">Find Quality Talent</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -121,7 +198,7 @@
       <div class="footer-content">
         <div class="footer-company">
           <div class="logo">
-            <img src="images/logo.png" alt="SkillBridge Logo">
+            <img src="images/logo.png" alt="SkillBridge Logo Footer">
           </div>
           <p>
             Connecting talent with opportunities. We specialize in bridging the gap between skilled professionals 
@@ -130,7 +207,7 @@
           <div class="footer-contact">
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
-              <span>Suite 30 Level 3 104 Bathrust Street,Sydney NSW 2000</span>
+              <span>Suite 30 Level 3 104 Bathurst Street, Sydney NSW 2000</span>
             </div>
             <div class="contact-item">
               <i class="fas fa-phone-alt"></i>
@@ -142,6 +219,7 @@
             </div>
           </div>
         </div>
+
         <div class="footer-links">
           <h4>Quick Links</h4>
           <ul>
@@ -151,6 +229,7 @@
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </div>
+
         <div class="footer-services">
           <h4>Our Services</h4>
           <ul>
@@ -161,12 +240,14 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2025 SkillBridge Recruitment Services. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>

@@ -3,7 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | SkillBridge Recruitment Services</title>
+  
+  <!-- SEO Title -->
+  <title>Industries We Serve | SkillBridge Recruitment Services</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="SkillBridge Recruitment Services provides industry-specific hiring solutions for healthcare, construction, IT, hospitality, retail, education, logistics, and more.">
+
+  <!-- Meta Keywords -->
+  <meta name="keywords" content="healthcare jobs, IT recruitment, construction staffing, hospitality hiring, retail jobs, logistics recruitment, SkillBridge, recruitment agency">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.myskillbridge.com.au/industries.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Industries We Serve | SkillBridge Recruitment Services">
+  <meta property="og:description" content="Discover the industries SkillBridge Recruitment Services supports, including healthcare, IT, engineering, education, retail, hospitality, logistics, and more.">
+  <meta property="og:image" content="https://www.myskillbridge.com.au/images/logo.png">
+  <meta property="og:url" content="https://www.myskillbridge.com.au/industries.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Industries We Serve | SkillBridge Recruitment Services">
+  <meta name="twitter:description" content="We connect skilled professionals with employers across healthcare, IT, engineering, hospitality, retail, education, and logistics.">
+  <meta name="twitter:image" content="https://www.myskillbridge.com.au/images/logo.png">
+
+  <!-- Schema.org (Industries Page) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Industries We Serve",
+    "description": "SkillBridge Recruitment Services provides hiring solutions across multiple industries such as healthcare, IT, construction, education, and more.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "SkillBridge Recruitment Services",
+      "url": "https://www.myskillbridge.com.au",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.myskillbridge.com.au/images/logo.png"
+      }
+    },
+    "about": [
+      {"@type": "Thing", "name": "Healthcare & Nursing"},
+      {"@type": "Thing", "name": "Construction & Engineering"},
+      {"@type": "Thing", "name": "Hospitality & Tourism"},
+      {"@type": "Thing", "name": "Information Technology"},
+      {"@type": "Thing", "name": "Retail & Sales"},
+      {"@type": "Thing", "name": "Education & Training"},
+      {"@type": "Thing", "name": "Manufacturing & Logistics"},
+      {"@type": "Thing", "name": "Medical Services"}
+    ]
+  }
+  </script>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -13,11 +68,11 @@
     <div class="container">
       <div class="header-content">
         <div class="logo">
-          <img src="images/logo.png" alt="SkillBridge Logo">
+          <img src="images/logo.png" alt="SkillBridge Recruitment Services Logo">
         </div>
         <nav class="nav">
           <a href="index.html">Home</a>
-          <a href="about.html" class="active">About</a>
+          <a href="about.html">About</a>
           <div class="dropdown">
             <a href="services.html">Services <i class="fas fa-caret-down"></i></a>
             <div class="dropdown-content">
@@ -25,7 +80,7 @@
               <a href="services.html">For Employers</a>
             </div>
           </div>
-          <a href="industries.html">Industries</a>
+          <a href="industries.html" class="active">Industries</a>
           <a href="index.html#contact">Contact</a>
         </nav>
         <div class="header-contact">
@@ -45,90 +100,77 @@
     </div>
   </header>
 
-<section class="industries" id="industries">
+  <!-- Industries Section -->
+  <section class="industries" id="industries">
     <div class="container">
-        <div class="section-header">
-            <h2><span class="gradient-text">Industries</span> We Serve</h2>
-            <p>We cater to a wide range of sectors, providing specialized recruitment solutions tailored to each industry's unique requirements.</p>
+      <div class="section-header">
+        <h1><span class="gradient-text">Industries</span> We Serve</h1>
+        <p>We cater to a wide range of sectors, providing specialized recruitment solutions tailored to each industry's unique requirements.</p>
+      </div>
+
+      <div class="industries-grid">
+        <div class="industry-item">
+          <div class="industry-icon red">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h2>Healthcare & Nursing</h2>
         </div>
 
-        <div class="industries-grid">
-            <!-- Healthcare & Nursing -->
-            <div class="industry-item">
-                <div class="industry-icon red">
-                    <i class="fas fa-heartbeat"></i>
-                </div>
-                <h3>Healthcare & Nursing</h3>
-            </div>
-
-            <!-- Construction & Engineering -->
-            <div class="industry-item">
-                <div class="industry-icon orange">
-                    <i class="fas fa-hard-hat"></i>
-                </div>
-                <h3>Construction & Engineering</h3>
-            </div>
-
-            <!-- Hospitality & Tourism -->
-            <div class="industry-item">
-                <div class="industry-icon blue">
-                    <i class="fas fa-utensils"></i>
-                </div>
-                <h3>Hospitality & Tourism</h3>
-                 
-            </div>
-
-            <!-- Information Technology -->
-            <div class="industry-item">
-                <div class="industry-icon purple">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <h3>Information Technology</h3>
-                 
-            </div>
-
-            <!-- Retail & Sales -->
-            <div class="industry-item">
-                <div class="industry-icon green">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
-                <h3>Retail & Sales</h3>
-                 
-            </div>
-
-            <!-- Education & Training -->
-            <div class="industry-item">
-                <div class="industry-icon indigo">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h3>Education & Training</h3>
-                 
-            </div>
-
-            <!-- Manufacturing & Logistics -->
-            <div class="industry-item">
-                <div class="industry-icon yellow">
-                    <i class="fas fa-industry"></i>
-                </div>
-                <h3>Manufacturing & Logistics</h3>
-                 
-            </div>
-
-            <!-- Medical Services -->
-            <div class="industry-item">
-                <div class="industry-icon pink">
-                    <i class="fas fa-stethoscope"></i>
-                </div>
-                <h3>Medical Services</h3>
-                 
-            </div>
+        <div class="industry-item">
+          <div class="industry-icon orange">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h2>Construction & Engineering</h2>
         </div>
 
-        <div class="industries-footer">
-            <p>And many more industries...</p>
+        <div class="industry-item">
+          <div class="industry-icon blue">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h2>Hospitality & Tourism</h2>
         </div>
+
+        <div class="industry-item">
+          <div class="industry-icon purple">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h2>Information Technology</h2>
+        </div>
+
+        <div class="industry-item">
+          <div class="industry-icon green">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h2>Retail & Sales</h2>
+        </div>
+
+        <div class="industry-item">
+          <div class="industry-icon indigo">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h2>Education & Training</h2>
+        </div>
+
+        <div class="industry-item">
+          <div class="industry-icon yellow">
+            <i class="fas fa-industry"></i>
+          </div>
+          <h2>Manufacturing & Logistics</h2>
+        </div>
+
+        <div class="industry-item">
+          <div class="industry-icon pink">
+            <i class="fas fa-stethoscope"></i>
+          </div>
+          <h2>Medical Services</h2>
+        </div>
+      </div>
+
+      <div class="industries-footer">
+        <p>And many more industries...</p>
+      </div>
     </div>
-</section>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -136,7 +178,7 @@
       <div class="footer-content">
         <div class="footer-company">
           <div class="logo">
-            <img src="images/logo.png" alt="SkillBridge Logo">
+            <img src="images/logo.png" alt="SkillBridge Logo Footer">
           </div>
           <p>
             Connecting talent with opportunities. We specialize in bridging the gap between skilled professionals 
@@ -145,7 +187,7 @@
           <div class="footer-contact">
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
-              <span>Suite 30 Level 3 104 Bathrust Street,Sydney NSW 2000</span>
+              <span>Suite 30 Level 3 104 Bathurst Street, Sydney NSW 2000</span>
             </div>
             <div class="contact-item">
               <i class="fas fa-phone-alt"></i>
@@ -157,6 +199,7 @@
             </div>
           </div>
         </div>
+
         <div class="footer-links">
           <h4>Quick Links</h4>
           <ul>
@@ -166,6 +209,7 @@
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </div>
+
         <div class="footer-services">
           <h4>Our Services</h4>
           <ul>
@@ -176,12 +220,14 @@
           </ul>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2025 SkillBridge Recruitment Services. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
