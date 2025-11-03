@@ -1,3 +1,18 @@
+// ✅ Enable Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    // Fade-in animation on load
+    const elementsToAnimate = document.querySelectorAll('.value-item, .service-card, .industry-item, .benefit-item');
+    elementsToAnimate.forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+    });
+});
+
 // Mobile menu functionality
 function toggleMobileMenu() {
     const nav = document.querySelector('.nav');
@@ -13,14 +28,15 @@ function toggleMobileMenu() {
         nav.style.top = '100%';
         nav.style.left = '0';
         nav.style.right = '0';
-        nav.style.background = '#fbfdffff';
+        nav.style.background = '#ffffff';
         nav.style.padding = '1rem';
         nav.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.1)';
+        nav.style.zIndex = '1000';
         mobileBtn.className = 'fas fa-times';
     }
 }
 
-// Smooth scrolling for navigation links
+// Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -31,11 +47,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
         }
-
-        // Close mobile menu if open
-        const nav = document.querySelector('.nav');
-        if (nav.style.display === 'flex') {
-            toggleMobileMenu();
+        // Close mobile menu after click
+        if (window.innerWidth <= 768) {
+            const nav = document.querySelector('.nav');
+            if (nav.style.display === 'flex') {
+                toggleMobileMenu();
+            }
         }
     });
 });
@@ -52,16 +69,6 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('visible');
         }
     });
-}, observerOptions);
-
-// Add fade-in class to elements and observe them
-document.addEventListener('DOMContentLoaded', function () {
-    const elementsToAnimate = document.querySelectorAll('.value-item, .service-card, .industry-item, .benefit-item');
-
-    elementsToAnimate.forEach(el => {
-        el.classList.add('fade-in');
-        observer.observe(el);
-    });
 });
 
 // Header scroll effect
@@ -76,7 +83,7 @@ function handleHeaderScroll() {
     }
 }
 
-// Button click ripple effect
+// Button ripple effect
 document.querySelectorAll('.btn').forEach(button => {
     button.addEventListener('click', function (e) {
         const ripple = document.createElement('span');
@@ -98,68 +105,7 @@ document.querySelectorAll('.btn').forEach(button => {
     });
 });
 
-// Form validation
-function validateForm() {
-    const form = document.getElementById('contactForm');
-    const inputs = form.querySelectorAll('input[required], textarea[required]');
-    let isValid = true;
-
-    inputs.forEach(input => {
-        if (!input.value.trim()) {
-            input.style.borderColor = '#2E6BB4';
-            isValid = false;
-        } else {
-            input.style.borderColor = '#4A90E2';
-        }
-    });
-
-    const email = form.querySelector('input[type="email"]');
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email.value && !emailRegex.test(email.value)) {
-        email.style.borderColor = '#2E6BB4';
-        isValid = false;
-    }
-
-    return isValid;
-}
-
-// Real-time validation
-document.querySelectorAll('#contactForm input, #contactForm textarea').forEach(input => {
-    input.addEventListener('blur', function () {
-        if (this.hasAttribute('required') && !this.value.trim()) {
-            this.style.borderColor = '#2E6BB4';
-        } else if (this.type === 'email' && this.value) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            this.style.borderColor = emailRegex.test(this.value) ? '#4A90E2' : '#2E6BB4';
-        } else {
-            this.style.borderColor = '#4A90E2';
-        }
-    });
-
-    input.addEventListener('focus', function () {
-        this.style.borderColor = '#f4f5f8ff';
-    });
-});
-
-// Lazy loading for images
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-
-    document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-    });
-}
-
-// Scroll to top functionality
+// Scroll to top button
 function createScrollToTop() {
     const scrollBtn = document.createElement('button');
     scrollBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
@@ -172,16 +118,14 @@ function createScrollToTop() {
         height: 50px;
         border-radius: 50%;
         background: #4A90E2;
-        color: #1A2A44;
+        color: white;
         border: none;
         cursor: pointer;
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
         z-index: 1000;
-        box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
     `;
-
     document.body.appendChild(scrollBtn);
 
     window.addEventListener('scroll', () => {
@@ -203,7 +147,7 @@ function createScrollToTop() {
 }
 createScrollToTop();
 
-// Debounce scroll events for header
+// Debounce scroll
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -215,27 +159,14 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
-const debouncedScrollHandler = debounce(handleHeaderScroll, 10);
-window.addEventListener('scroll', debouncedScrollHandler);
+const debouncedScroll = debounce(handleHeaderScroll, 10);
+window.addEventListener('scroll', debouncedScroll);
 
-// Fade-in for headings
-const headings = document.querySelectorAll('.section-header h2');
-headings.forEach(heading => {
-    observer.observe(heading);
-    heading.classList.add('fade-in');
-});
-
-// ==========================
-// FORMSPREE SUBMISSION FIX
-// ==========================
+// Form handling with Formspree
 const form = document.getElementById('contactForm');
-
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
-
-    // Validate form
     if (!validateForm()) return;
-
     const formData = new FormData(form);
 
     try {
@@ -245,26 +176,34 @@ form.addEventListener('submit', async (e) => {
             headers: { 'Accept': 'application/json' }
         });
 
-        // Remove existing message
-        const existingMsg = document.querySelector('.success-message');
-        if (existingMsg) existingMsg.remove();
-
-        // Show success message
         const messageDiv = document.createElement('div');
         messageDiv.className = 'success-message show';
         messageDiv.innerHTML = response.ok
-            ? `<i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.`
-            : `<i class="fas fa-times-circle"></i> Oops! There was a problem submitting your form.`;
+            ? `<i class="fas fa-check-circle"></i> Message Sent Successfully!`
+            : `<i class="fas fa-times-circle"></i> Error sending message`;
 
         form.parentNode.insertBefore(messageDiv, form);
-
         if (response.ok) form.reset();
 
-        setTimeout(() => {
-            messageDiv.remove();
-        }, 5000);
-
+        setTimeout(() => messageDiv.remove(), 5000);
     } catch (error) {
         alert("Network error: " + error.message);
     }
 });
+
+// Form validation function
+function validateForm() {
+    const form = document.getElementById('contactForm');
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            input.style.borderColor = '#e63946';
+            isValid = false;
+        } else {
+            input.style.borderColor = '#4A90E2';
+        }
+    });
+    return isValid;
+}
